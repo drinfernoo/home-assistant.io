@@ -107,6 +107,17 @@ This service allows for controlling the WLED effect.
 A list of all available effects (and the behavior of the intensity for each
 effect) [is documented in the WLED Wiki](https://github.com/Aircoookie/WLED/wiki/List-of-effects-and-palettes#effects).
 
+### Service `wled.live`
+
+This service allows for controlling the WLED live override mode.
+
+| Service Data Attribute | Required | Description                                                                                                     |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `entity_id`            | no       | A WLED entity ID, or list entity IDs, to apply the effect to. Use `entity_id: all` to target all WLED entities. |
+| `live`                 | no       | Value for the live override mode                                                                                |
+
+Valid values are `off`, `on`, or `off_until_reboot`.
+
 ### Service `wled.preset`
 
 This service allows for loading a preset saved on the WLED device.
